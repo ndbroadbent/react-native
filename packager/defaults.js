@@ -34,7 +34,8 @@ exports.polyfills = [
 ];
 
 exports.providesModuleNodeModules = [
-  'react-native',
+  // 'react-native',
+  'react-native-web',
   'react-native-windows',
 ];
 

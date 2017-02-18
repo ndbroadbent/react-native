@@ -14,6 +14,6 @@
  */
 module.exports = {
   extraNodeModules: {
-    'react-native': __dirname,
+    // 'react-native': __dirname,
   },
 };

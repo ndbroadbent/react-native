@@ -300,6 +300,11 @@ class ResolutionRequest {
   }
 
   _resolveNodeDependency(fromModule, toModuleName) {
+    if (this._platform === 'web' && (toModuleName === 'react-native')) {
+      // console.log(`\n[_resolveNodeDependency]: Aliasing react-native to react-native-web (in: ${fromModule.path})`)
+      toModuleName = 'react-native-web'
+    }
+
     if (isRelativeImport(toModuleName) || isAbsolutePath(toModuleName)) {
       return this._resolveFileOrDir(fromModule, toModuleName);
     } else {
